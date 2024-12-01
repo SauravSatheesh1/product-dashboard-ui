@@ -23,9 +23,9 @@ const App: React.FC = () => {
       <Router>
         <Routes>
           <Route path="/product-dashboard-ui/" element={<Login />} />
-          <Route path="product-dashboard-ui/register" element={<Register />} />
+          <Route path="/product-dashboard-ui/register" element={<Register />} />
           <Route
-            path="product-dashboard-ui//dash-board"
+            path="/product-dashboard-ui/dash-board"
             element={
               <ProtectedRoute>
                 <Dashboard />
