@@ -48,7 +48,7 @@ export const Register: React.FC = () => {
         description: "You can now log in with your new account.",
         variant: "success",
       });
-      navigate("/");
+      navigate("/product-dashboard-ui/");
     } catch (error) {
       console.error("Registration error:", error);
       toast({
@@ -160,7 +160,7 @@ export const Register: React.FC = () => {
           </Button>
           <p className="mt-2 text-sm text-center text-gray-600">
             Already have an account?{" "}
-            <Link to="/" className="text-blue-600 hover:underline">
+            <Link to="/product-dashboard-ui/" className="text-blue-600 hover:underline">
               Login
             </Link>
           </p>
