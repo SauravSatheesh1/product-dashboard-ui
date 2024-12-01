@@ -22,7 +22,7 @@ const App: React.FC = () => {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
             path="/dash-board"
