@@ -45,7 +45,7 @@ export const Login: React.FC = () => {
         description: `Welcome back, ${response.data.user.username}!`,
         variant: "success",
       });
-      navigate("/product-dashboard-ui/dash-board");
+      navigate("/dash-board");
     } catch (error) {
       console.error("Login error:", error);
       toast({
@@ -118,7 +118,7 @@ export const Login: React.FC = () => {
           </Button>
           <p className="mt-2 text-sm text-center text-gray-600">
             Don't have an account?{" "}
-            <Link to="/product-dashboard-ui/register" className="text-blue-600 hover:underline">
+            <Link to="/register" className="text-blue-600 hover:underline">
               Create one
             </Link>
           </p>

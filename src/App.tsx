@@ -20,12 +20,12 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({
 const App: React.FC = () => {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={"/product-dashboard-ui/"}>
         <Routes>
-          <Route path="/product-dashboard-ui/" element={<Login />} />
-          <Route path="/product-dashboard-ui/register" element={<Register />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route
-            path="/product-dashboard-ui/dash-board"
+            path="/dash-board"
             element={
               <ProtectedRoute>
                 <Dashboard />

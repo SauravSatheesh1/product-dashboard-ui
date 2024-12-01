@@ -49,7 +49,7 @@ export const NavBar: React.FC = () => {
           <DropdownMenuItem
             onClick={() => {
               logout();
-              navigate("/product-dashboard-ui/");
+              navigate("/");
             }}
           >
             Log out
