@@ -22,10 +22,10 @@ const App: React.FC = () => {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/product-dashboard-ui/" element={<Login />} />
+          <Route path="product-dashboard-ui/register" element={<Register />} />
           <Route
-            path="/dash-board"
+            path="product-dashboard-ui//dash-board"
             element={
               <ProtectedRoute>
                 <Dashboard />
