@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# Frontend for Product Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for a Product Dashboard built with React and TypeScript. It provides a user interface for authentication,and CSV file upload for bulk product import.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. [Prerequisites](#prerequisites)
+2. [Technology Stack](#technology-stack)
+3. [Getting Started](#getting-started)
+   - [Cloning the Repository](#cloning-the-repository)
+   - [Installing Dependencies](#installing-dependencies)
+   - [Environment Variables](#environment-variables)
+4. [Running the Application](#running-the-application)
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before you begin, ensure you have the following installed on your system:
+- Node.js (v21 or later)
+- npm (v10 or later)
+- Git
 
-- Configure the top-level `parserOptions` property like this:
+## Technology Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React
+- TypeScript
+- React Router (for routing)
+- Axios (for API requests)
+- shadcn/ui (for UI components)
+- React Hook Form (for form handling)
+- Tailwind CSS (for styling)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Cloning the Repository
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Open your terminal.
+2. Clone the repository:
+
+### Installing Dependencies
+
+1. Navigate to the project directory: `cd product-dashboard-ui`
+2. Install the dependencies: `npm install`
+
+### Environment Variables
+
+This project uses environment variables for configuration. Create a `.env` file in the root directory with the following variables:
+
+Replace the placeholder values with your actual configuration:
+- `VITE_API_URL`: URL of backend application.  
+
+**Important:** Never commit your `.env` file to version control. Add it to your `.gitignore` file.
+
+### Setting Up Environment Variables
+
+Refer to the [Environment Variables](#environment-variables) section for detailed information on setting up your `.env` file.
+
+## Running the Application
+
+### Development Mode
+
+1. Start the development server: `npm run dev`
+
+### Production Build
+
+1. Build the application: `npm run build`
+2. Run the built application: `npm run preview`
